@@ -1,0 +1,6 @@
+framework module FirebaseHelper {
+  umbrella header "FirebaseHelper-umbrella.h"
+
+  export *
+  module * { export * }
+}

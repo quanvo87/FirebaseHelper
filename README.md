@@ -1,6 +1,6 @@
 # FirebaseHelper
 
-[![CI Status](http://img.shields.io/travis/quanvo87/FirebaseHelper.svg?style=flat)](https://travis-ci.org/quanvo87/FirebaseHelper)
+<!--[![CI Status](http://img.shields.io/travis/quanvo87/FirebaseHelper.svg?style=flat)](https://travis-ci.org/quanvo87/FirebaseHelper)-->
 [![Version](https://img.shields.io/cocoapods/v/FirebaseHelper.svg?style=flat)](http://cocoapods.org/pods/FirebaseHelper)
 [![License](https://img.shields.io/cocoapods/l/FirebaseHelper.svg?style=flat)](http://cocoapods.org/pods/FirebaseHelper)
 [![Platform](https://img.shields.io/cocoapods/p/FirebaseHelper.svg?style=flat)](http://cocoapods.org/pods/FirebaseHelper)
