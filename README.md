@@ -5,10 +5,6 @@
 [![License](https://img.shields.io/cocoapods/l/FirebaseHelper.svg?style=flat)](http://cocoapods.org/pods/FirebaseHelper)
 [![Platform](https://img.shields.io/cocoapods/p/FirebaseHelper.svg?style=flat)](http://cocoapods.org/pods/FirebaseHelper)
 
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
 ## Requirements
 
 Swift 4
@@ -139,9 +135,10 @@ public func makeReference(_ first: String, _ rest: String...) throws -> Database
 
 `makeReference` will throw an error if passed an invalid child.
 
-## Author
+## Collaborators
 
-quanvo87, qvo1987@gmail.com
+- [Quan Vo](https://github.com/quanvo87)
+- [Wilson Ding](https://github.com/dingwilson)
 
 ## License
 
