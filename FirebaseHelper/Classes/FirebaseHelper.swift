@@ -54,11 +54,11 @@ public struct FirebaseHelper {
         }
     }
 
-    public func increment(_ amount: Int, at first: String, _ rest: String..., completion: @escaping ErrorCallback) {
-        increment(amount, at: first, rest, completion: completion)
+    public func increment(by amount: Int, at first: String, _ rest: String..., completion: @escaping ErrorCallback) {
+        increment(by: amount, at: first, rest, completion: completion)
     }
 
-    public func increment(_ amount: Int, at first: String, _ rest: [String], completion: @escaping ErrorCallback) {
+    public func increment(by amount: Int, at first: String, _ rest: [String], completion: @escaping ErrorCallback) {
         do {
             try makeReference(first, rest).runTransactionBlock({ (currentData) -> TransactionResult in
                 if let value = currentData.value {

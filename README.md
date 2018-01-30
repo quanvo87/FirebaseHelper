@@ -5,6 +5,15 @@
 [![License](https://img.shields.io/cocoapods/l/FirebaseHelper.svg?style=flat)](http://cocoapods.org/pods/FirebaseHelper)
 [![Platform](https://img.shields.io/cocoapods/p/FirebaseHelper.svg?style=flat)](http://cocoapods.org/pods/FirebaseHelper)
 
+FirebaseHelper is a small wrapper over Firebase's realtime database, providing streamlined methods for get, set, delete, and increment values.
+
+## Features
+- [x] Setup Firebase Realtime Database Ref
+- [x] Read values (get)
+- [x] Write/Update values (set)
+- [x] Remove values (delete)
+- [x] Increment values (increment)
+
 ## Requirements
 
 Swift 4
@@ -31,7 +40,7 @@ let firebaseHelper = FirebaseHelper(FirebaseDatabase.Database.database().referen
 
 `FirebaseHelper(_ ref: DatabaseReference)` takes in a `DatabaseReference`. Generally you'd want this to be the root of your database.
 
-For convenience, you can put this in say, a common utils file, in your project:
+For convenience, you can add something like this to your project:
 
 ```swift
 extension FirebaseHelper {
@@ -41,7 +50,7 @@ extension FirebaseHelper {
 }
 ```
 
-Now, anywhere in your project, you can simply call `FirebaseHelper.main` to access this instance of `FirebaseHelper`.
+And now you can simply call `FirebaseHelper.main` to access this instance of `FirebaseHelper` from anywhere in your project.
 
 ### Common Database Operations
 
@@ -99,7 +108,7 @@ FirebaseHelper.main.delete("users", "john123", "favoriteFood") { error in
   }
 }
 
-FirebaseHelper.main.increment(5, "users", "john123", "favoriteFoodEatenThisMonth") {
+FirebaseHelper.main.increment(by: 5, "users", "john123", "favoriteFoodEatenThisMonth") {
     if let error = error {
       // handle error
   }
@@ -113,8 +122,10 @@ public func set(_ value: Any, at first: String, _ rest: String..., completion: @
 
 public func delete(_ first: String, _ rest: String..., completion: @escaping (Error?) -> Void)
 
-public func increment(_ amount: Int, at first: String, _ rest: String..., completion: @escaping (Error?) -> Void)
+public func increment(by amount: Int, at first: String, _ rest: String..., completion: @escaping (Error?) -> Void)
 ```
+
+> Note: You should only `set()` accepted value types. See [Firebase docs](https://firebase.google.com/docs/database/ios/read-and-write#basic_write).
 
 #### Safely Make A DatabaseReference
 
